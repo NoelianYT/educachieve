@@ -10,7 +10,7 @@ class TeacherModel extends Model
     protected $primaryKey = 'teacher_id';
     protected $allowedFields = [
         'user_id', 'first_name', 'last_name', 'phone_number', 'tpt_lhr', 
-        'tgl_lhr', 'gender', 'address', 'hire_date', 'quality', 'status'
+        'tgl_lhr', 'gender', 'address', 'hire_date', 'quality', 'status', 'introduction'
     ];
 
     public function getTeachers()

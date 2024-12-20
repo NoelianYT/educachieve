@@ -1,0 +1,447 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5c5cff;
+}
+
+header {
+    background-color: #87CEFA;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.menu-left, .menu-right {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-left li a,
+.menu-right li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.menu-right li a.register-btn {
+    background-color: #87CEFA;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.menu-right li a.register-btn:hover {
+    background-color: white;
+    color: #87CEFA;
+}
+
+.menu-right li a:hover,
+.menu-left li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+.profile-pic:hover {
+    border: 2px solid #87CEFA;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    background-color: #e6ecff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar li a:hover {
+    background-color: #d8e3ff;
+}
+
+.content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    border-top: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.faq-item:first-of-type {
+    border-top: none;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item h3:hover {
+    color: #0056b3;
+}
+
+.faq-item p {
+    display: none;
+    margin-top: 10px;
+    color: #666;
+}
+
+.faq-item.active p {
+    display: block;
+}
+
+.about-us {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about-us .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.about-us p {
+    font-size: 18px;
+}
+
+.teachers-info {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.teachers-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.teachers-info p {
+    font-size: 16px;
+}
+
+.teachers-profile {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.teachers-profile h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.profile-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.profile-card img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.profile-card p {
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+}
+
+.teachers-profile .container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.teachers-profile .profile-card {
+    min-width: 200px;
+    flex-shrink: 0;
+}
+
+.offers {
+    padding: 60px 20px;
+    background-color: #e6ecff;
+    text-align: center;
+}
+
+.offers h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.offers p {
+    font-size: 16px;
+}
+
+.advantages-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.advantages-title {
+    font-size: 250px;
+    text-align: left;
+    flex: 1;
+}
+
+.advantages-list {
+    flex: 2;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.advantages h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.advantages ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.advantages ul li {
+    margin-bottom: 10px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.advantage-item img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .advantages-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advantages-title {
+        font-size: 150px;
+        text-align: center;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantage-item img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us h2 {
+        font-size: 30px;
+    }
+
+    .about-us p {
+        font-size: 16px;
+    }
+
+    .teachers-profile h2 {
+        font-size: 24px;
+    }
+
+    .profile-card {
+        width: 130px;
+        height: 200px;
+    }
+
+    .profile-card img {
+        width: 130px;
+        height: 170px;
+    }
+
+    .offers h2 {
+        font-size: 24px;
+    }
+
+    .offers p {
+        font-size: 14px;
+    }
+
+    .advantages-title {
+        font-size: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us h2 {
+        font-size: 24px;
+    }
+
+    .about-us p {
+        font-size: 14px;
+    }
+
+    .profile-card {
+        width: 100px;
+        height: 150px;
+    }
+
+    .profile-card img {
+        width: 100px;
+        height: 130px;
+    }
+
+    footer h2 {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}

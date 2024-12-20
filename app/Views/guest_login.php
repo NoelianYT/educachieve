@@ -6,7 +6,7 @@
     <title>Login | EducAchieve</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/guest-login.css'); ?>">
     <script src="<?= base_url('assets/js/guest-login.js'); ?>" defer></script>
-    <link rel="icon" type="image/png" href="<?= base_url('assets/images/logo.png'); ?>">
+    <link rel="icon" type="image/png" href="<?= base_url('uploads/images/logo.png'); ?>">
     <style>
         body {
             display: flex;
@@ -83,12 +83,15 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form action="<?= base_url('login/submit'); ?>" method="post">
+        <form action="/login/submit" method="post">
+            <?= csrf_field(); ?>
+            
             <?php if(session()->getFlashdata('error')) { ?>
                 <div class="alert alert-danger">
                     <?php echo session()->getFlashdata('error')?>
                 </div>
             <?php } ?>
+            
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" placeholder="Username" 
@@ -107,7 +110,7 @@
             </div>
             <button type="submit" name="login" class="login-btn" value="LOGIN">Login</button>
         </form>
-        <a href="<?= site_url('guest-register')?>" class="register-link">Belum punya akun? Daftar di sini</a>
+        <a href="/guest-register" class="register-link">Belum punya akun? Daftar di sini</a>
     </div>
 </body>
 </html>
